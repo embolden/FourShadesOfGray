@@ -1,0 +1,111 @@
+{
+  "Format": "1.14.0",
+  "ConfigSchema": {
+    "ReplaceBabySprite": {
+      "AllowValues": "true,false",
+      "Default": "true",
+      "AllowMultiple": "false"
+    },
+    "ReplaceToddlerSprite": {
+      "AllowValues": "true,false",
+      "Default": "true",
+      "AllowMultiple": "false"
+    },
+    "ReplaceRoommateWithRomance": {
+      "AllowValues": "true,false",
+      "Default": "true",
+      "AllowMultiple": "false"
+    }
+  },
+  "Changes": [
+    {
+      "LogName": "Four Shades of Gray - Krobus Jr Baby",
+      "Action": "Load",
+      "Target": "Characters/Baby, Characters/Baby_dark",
+      "FromFile": "assets/Baby_Krobus.png",
+      "Enabled": "{{ReplaceBabySprite}}",
+      "When": {
+        "Spouse": "Krobus"
+      }
+    },
+    {
+      "LogName": "Four Shades of Gray - Krobus Jr Toddler",
+      "Action": "Load",
+      "Target": "Characters/Toddler, Characters/Toddler_dark",
+      "FromFile": "assets/Toddler_Krobus.png",
+      "Enabled": "{{ReplaceToddlerSprite}}",
+      "When": {
+        "Spouse": "Krobus"
+      }
+    },
+    {
+      "LogName": "Four Shades of Gray - Krobus Wedding Dress",
+      "Action": "EditImage",
+      "Target": "Characters/Krobus",
+      "FromFile": "characters/Krobus.png",
+      "PatchMode": "Overlay",
+      "Enabled": "{{ReplaceRoommateWithRomance}}"
+    },
+    {
+      "LogName": "Four Shades of Gray - Krobus Dialogue",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Krobus",
+      "FromFile": "characters/dialogue/Krobus.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}"
+    },
+    {
+      "LogName": "Four Shades of Gray - Marriage Dialogue Krobus",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/MarriageDialogueKrobus",
+      "FromFile": "characters/dialogue/MarriageDialogueKrobus.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}",
+      "When": {
+        "Relationship:Krobus": "Married",
+        //"{{themattfiles.fourshadesofgray/IsRoommate:Krobus}}": "false"
+      }
+    },
+    {
+      "LogName": "Four Shades of Gray - Engagement Dialogue",
+      "Action": "EditData",
+      "Target": "Data/EngagementDialogue",
+      "FromFile": "data/EngagementDialogue.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}"
+    },
+    {
+      "LogName": "Four Shades of Gray - NPC Dispositions",
+      "Action": "EditData",
+      "Target": "Data/NPCDispositions",
+      "FromFile": "data/NPCDispositions.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}"
+    },
+    {
+      "LogName": "Four Shades of Gray - Characters",
+      "Action": "EditData",
+      "Target": "Strings/Characters",
+      "FromFile": "strings/Characters.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}",
+      "When": {
+        "Relationship:Krobus": "Married",
+        //"{{themattfiles.fourshadesofgray/IsRoommate:Krobus}}": "false"
+      }
+    },
+    {
+      "LogName": "Four Shades of Gray - Locations",
+      "Action": "EditData",
+      "Target": "Strings/Locations",
+      "FromFile": "strings/Locations.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}",
+      "When": {
+        "Relationship:Krobus": "Married",
+        //"{{themattfiles.fourshadesofgray/IsRoommate:Krobus}}": "false"
+      }
+    },
+    {
+      "LogName": "Four Shades of Gray - StringsFromCSFiles",
+      "Action": "EditData",
+      "Target": "Strings/StringsFromCSFiles",
+      "FromFile": "strings/StringsFromCSFiles.json",
+      "Enabled": "{{ReplaceRoommateWithRomance}}"
+    },
+  ]
+}

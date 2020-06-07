@@ -1,0 +1,20 @@
+{
+  "Name": "[CP] IsRoommate Token",
+  "Author": "themattfiles",
+  "Version": "0.0.1-beta",
+  "Description": "Check if a villager is your roommate.",
+  "UniqueID": "themattfiles.isroommate",
+  "MinimumApiVersion": "3.5",
+  "UpdateKeys": [],
+  "EntryDll": "FourShadesOfGray.dll",
+  "Dependencies": [
+    {
+        "UniqueID": "Pathoschild.ContentPatcher",
+	    "IsRequired": false
+    },
+    {
+    "UniqueID": "bcmpinc.StardewHack",
+    "MinimumVersion": "3.0"
+  }
+  ]
+}

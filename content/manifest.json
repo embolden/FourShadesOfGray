@@ -1,0 +1,23 @@
+{
+  "Name": "[CP] Four Shades of Gray",
+  "Author": "themattfiles",
+  "Version": "0.0.1-beta",
+  "Description": "Get married and have kids with Krobus",
+  "UniqueID": "themattfiles.fourshadesofgray",
+  "MinimumApiVersion": "3.5",
+  "UpdateKeys": [],
+  "Dependencies": [
+    {
+      "UniqueID": "neonag.Krobus",
+      "IsRequired": false
+    },
+    {
+        "UniqueID": "Pathoschild.ContentPatcher",
+	    "IsRequired": false
+    }
+  ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "1.6.0"
+  }
+}
